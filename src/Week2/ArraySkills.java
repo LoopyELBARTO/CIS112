@@ -26,7 +26,7 @@ public class ArraySkills {
         myData[4] = "Mora";
 
         // 4. Fill up all of the remaining indeces in the array with more names
-        myData[1] = "Bob";
+        myData[1] = "Bobby";
         myData[2] = "Dayle";
         myData[3] = "Kizzy";
         myData[5] = "Jim";
@@ -38,7 +38,7 @@ public class ArraySkills {
 
         // 5. Swap the values at index 5 and index 1
         myData[1] = "Jim";
-        myData[5] = "Bob";
+        myData[5] = "Bobby";
 
         // 6. Print the array from beginning to end.
         for (int i = 0; i <= 9; i++){
@@ -53,7 +53,6 @@ public class ArraySkills {
         Random random = new Random();
         for (int i = myData.length - 1; i >= 0; i--)
         {
-
             index = random.nextInt(i + 1);
             temp = myData[index];
             myData[index] = myData[i];
@@ -64,23 +63,17 @@ public class ArraySkills {
         System.out.println();
 
         // 8. Find and print the longest and shortest Strings in the array
-        /*int index2 = 0;
-        int stringLength =  myData[0].length();
-        for (int i = 0; i < myData.length; i++){
-            if (myData[i].length() > stringLength){
-                index2 = i;
-                stringLength = myData[i].length();
-            }
-            System.out.print(myData[i] + " ");
-        }*/
 
-        for (int i = 0; i <= myData.length-1; i++){
-            //System.out.print(myData[i].length()+ " ");
-            String s = myData[i];
-            if (myData[i].length() > s.length()){
-                s = myData[i];
-            }
-            System.out.print(s);
+        int stringIndex;
+        String temp2;
+
+        for (int i = 0; i == myData.length - 1; i++){
+            stringIndex = i;
+            temp2 = myData[stringIndex];
+            myData[stringIndex] = myData[i];
+            //myData[i] = temp2;
+
+            System.out.println(myData[i]);
         }
 
         // 9. Add up the total number of characters in all of the strings in the array and print the answer
