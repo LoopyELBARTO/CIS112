@@ -1,6 +1,7 @@
 package Week2;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class ArraySkills {
     public static void main(String[] args) {
@@ -60,29 +61,75 @@ public class ArraySkills {
 
             System.out.print(myData[i] + " ");
         }
+
         System.out.println();
 
         // 8. Find and print the longest and shortest Strings in the array
 
-        int stringIndex;
-        String temp2;
+        String longestString = " ";
 
-        for (int i = 0; i == myData.length - 1; i++){
-            stringIndex = i;
-            temp2 = myData[stringIndex];
-            myData[stringIndex] = myData[i];
-            //myData[i] = temp2;
-
-            System.out.println(myData[i]);
+        for (int i = 0; i < myData.length; i++){
+            if (longestString.length() <= myData[i].length()){
+                longestString = myData[i];
+            }
         }
+        System.out.print("Longest String: ");
+        System.out.println(longestString);
+
+        /*String shortestString = " ";
+
+        for (int j = 0; j >= myData.length; j++ ){
+            if (shortestString.length() >= myData[j].length()){
+                shortestString = myData[j];
+            }
+        }
+        System.out.print(shortestString);*/
+
 
         // 9. Add up the total number of characters in all of the strings in the array and print the answer
+        int total = 0;
+        int size = 0;
+        for (int i = 0; i <= myData.length-1; i++){
+            size = myData[i].length();
+            total = total + size;
+        }
+        System.out.print("Total character count: ");
+        System.out.println(total);
+
 
         // 10. Prompt the user for a String and then perform a linear search of the array
         //  to see if that string is or is not in the array. Print if it is or is not found.
 
+        String userInput;
+        boolean isMatch = false;
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter a String: ");
+        userInput = keyboard.nextLine();
+
+
+        for (int i = 0; i < myData.length; i++){
+
+            if (userInput.equals(myData[i])){
+               isMatch = true;
+            }
+        }
+        if (isMatch){
+            System.out.print(userInput + " found!");
+        }
+        else {
+            System.out.print(userInput + " not found!");
+        }
+        System.out.println();
+
         // 11. Remove the item at index 4 of the array by shifting everything after it one spot to the left.
         // This means your array should have one empty index at the end after the shift (delete the duplicate item at the end).
+
+        myData[4] = null;
+        int
+        for (int j = myData.length; j > 0; j --){
+            System.out.print(j + " ");
+        }
+
 
         // 12. Create a new array that is twice as big as the current array and copy all of the items to the new array.
         // When complete, swap references so our old array gets garbage collected and the new array is pointed to by your array variable myData.
