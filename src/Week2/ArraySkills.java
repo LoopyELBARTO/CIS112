@@ -144,7 +144,7 @@ public class ArraySkills {
 
         myData[9] = "";
 
-        for (int i = 0; i < myData.length; i++){
+        for (int i = 0; i < myData.length-1; i++){
             System.out.print(myData[i] + " ");
         }
         System.out.println();
@@ -155,6 +155,17 @@ public class ArraySkills {
         // 12. Create a new array that is twice as big as the current array and copy all of the items to the new array.
         // When complete, swap references so our old array gets garbage collected and the new array is pointed to by your array variable myData.
 
+        String[] myBiggerData = new String[myData.length + 10];
+
+        for (int i = 0; i < myData.length; i++){
+            myBiggerData[i] = myData[i];
+            //System.out.print(myBiggerData[i]+ " ");
+        }
+        //Test
+        /*myBiggerData[18] = "Hi";
+        for (int i = 0; i < myBiggerData.length; i++){
+            System.out.print(myBiggerData[i] + " ");
+        }*/
         // 13. Prompt the user to enter 2 numbers within the range of the array's length. If the first is larger than the second print backwards from that index to the first.
         // If the second is larger than the first, print forward in the array from the first index to the second.
     }
