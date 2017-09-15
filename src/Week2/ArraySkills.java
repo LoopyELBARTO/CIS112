@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class ArraySkills {
     public static void main(String[] args) {
+        System.out.println(
+                "==============================LISTED=============================");
 
         // ***********************
         // For each item below you must code the solution. You may not use any of the
@@ -46,9 +48,10 @@ public class ArraySkills {
             System.out.print(myData[i] + " " );
         }
         System.out.println();
+        System.out.println(
+                "=============================SHUFFLED============================");
 
         // 7. Shuffle the array of strings
-        Random rand = new Random();
         int index;
         String temp;
         Random random = new Random();
@@ -63,6 +66,8 @@ public class ArraySkills {
         }
 
         System.out.println();
+        System.out.println(
+                "============================LONG/SHORT============================");
 
         // 8. Find and print the longest and shortest Strings in the array
 
@@ -76,16 +81,18 @@ public class ArraySkills {
         System.out.print("Longest String: ");
         System.out.println(longestString);
 
-        /*String shortestString = " ";
+        String shortestString = "   ";
 
-        for (int j = 0; j >= myData.length; j++ ){
-            if (shortestString.length() >= myData[j].length()){
+        for (int j = 0; j < myData.length; j++ ){
+            if (myData[j].length() <= shortestString.length()){
                 shortestString = myData[j];
             }
         }
-        System.out.print(shortestString);*/
+        System.out.print("Shortest String: ");
+        System.out.println(shortestString);
 
 
+        System.out.println("===========================TOTAL_COUNT============================");
         // 9. Add up the total number of characters in all of the strings in the array and print the answer
         int total = 0;
         int size = 0;
@@ -95,6 +102,9 @@ public class ArraySkills {
         }
         System.out.print("Total character count: ");
         System.out.println(total);
+
+
+        System.out.println("===========================SEARCH============================");
 
 
         // 10. Prompt the user for a String and then perform a linear search of the array
@@ -121,14 +131,25 @@ public class ArraySkills {
         }
         System.out.println();
 
+        System.out.println("===========================ARRAY_SHIFT============================");
+
         // 11. Remove the item at index 4 of the array by shifting everything after it one spot to the left.
         // This means your array should have one empty index at the end after the shift (delete the duplicate item at the end).
-
+        boolean isNull = false;
         myData[4] = null;
-        int
-        for (int j = myData.length; j > 0; j --){
-            System.out.print(j + " ");
+        int removeIndex = 4;
+        for (int i = removeIndex; i < myData.length-1; i++){
+           myData[i] = myData[i + 1];
         }
+
+        myData[9] = "";
+
+        for (int i = 0; i < myData.length; i++){
+            System.out.print(myData[i] + " ");
+        }
+        System.out.println();
+
+        System.out.println("===========================BIGGER_ARRAY============================");
 
 
         // 12. Create a new array that is twice as big as the current array and copy all of the items to the new array.
