@@ -135,14 +135,14 @@ public class ArraySkills {
 
         // 11. Remove the item at index 4 of the array by shifting everything after it one spot to the left.
         // This means your array should have one empty index at the end after the shift (delete the duplicate item at the end).
-        boolean isNull = false;
         myData[4] = null;
         int removeIndex = 4;
         for (int i = removeIndex; i < myData.length-1; i++){
            myData[i] = myData[i + 1];
+           System.out.print(myData[i] + " ");
         }
-
-        myData[9] = "";
+        System.out.println();
+        myData[9] = null;
 
         for (int i = 0; i < myData.length-1; i++){
             System.out.print(myData[i] + " ");
@@ -162,11 +162,55 @@ public class ArraySkills {
             //System.out.print(myBiggerData[i]+ " ");
         }
         //Test
-        /*myBiggerData[18] = "Hi";
+        myBiggerData[18] = "Hi";
         for (int i = 0; i < myBiggerData.length; i++){
             System.out.print(myBiggerData[i] + " ");
-        }*/
+        }
+        System.out.println();
+        System.out.println("===========================Strings============================");
+
         // 13. Prompt the user to enter 2 numbers within the range of the array's length. If the first is larger than the second print backwards from that index to the first.
         // If the second is larger than the first, print forward in the array from the first index to the second.
+        int inputOne;
+        int inputTwo;
+
+        System.out.print("Please enter the first number: ");
+        inputOne = keyboard.nextInt();
+
+        for (int i = 1; i > 0; i++){
+            if (inputOne > myBiggerData.length - 1){
+
+                System.out.print("The number is out of range. Please enter the first number between 0-19: ");
+                inputOne = keyboard.nextInt();
+            }
+        }
+
+        System.out.print("Please enter the second number: ");
+        inputTwo = keyboard.nextInt();
+
+        for (int i = 1; i > 0; i++){
+            if (inputTwo > myBiggerData.length - 1){
+
+                System.out.print("The number is out of range. Please enter the second number between 0-19: ");
+                inputTwo = keyboard.nextInt();
+            }
+        }
+        System.out.println();
+
+        if (inputOne > inputTwo){ //Print backward
+
+            for (int i = inputOne; i > inputTwo - 1; i--){
+
+                System.out.print(myBiggerData[i] + " ");
+            }
+        }
+
+        if (inputOne < inputTwo){ //Print forward
+
+            for (int i = inputOne; i <= inputTwo; i++){
+
+                System.out.print(myBiggerData[i] + " ");
+            }
+        }
     }
 }
