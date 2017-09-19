@@ -2,8 +2,9 @@ package Week3;
 
 public class ArrayPair<T> implements PairInterface<T> {
 
+
     @Override
-    public void setOne() {
+    public void setOne(T OBJ) {
 
     }
 
@@ -13,7 +14,7 @@ public class ArrayPair<T> implements PairInterface<T> {
     }
 
     @Override
-    public void setTwo() {
+    public void setTwo(T OBJ) {
 
     }
 

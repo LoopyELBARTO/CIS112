@@ -2,11 +2,11 @@ package Week3;
 
 public interface PairInterface<T> {
 
-    void setOne();
+    void setOne(T OBJ);
 
     T getOne();
 
-    void setTwo();
+    void setTwo(T OBJ);
 
     T getTwo();
 }
