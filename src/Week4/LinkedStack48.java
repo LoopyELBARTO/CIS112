@@ -24,19 +24,41 @@ public class LinkedStack48<T> extends LinkedStack<T> {
     }
 
     public void popSome(int count){
-        LLNode<T> nodeToPop = top;
-        String temp = "";
        if (isEmpty()) {
            throw new StackUnderflowException("Popped Empty stack");
        }
        else {
            for (int i = 0; i < count; i++){
-               temp += nodeToPop.getInfo().toString();
-               nodeToPop = nodeToPop.getLink();
                pop();
            }
        }
 
+    }
+
+    public boolean swapStart(){
+        LLNode<T> availableNodes = top;
+        String temp = "";
+        String temp2 = "";
+        String topNode = "";
+        String underTopNode = "";
+        if (Size()< 2){
+            return false;
+        }
+        else {
+           topNode += availableNodes.getInfo().toString();
+           temp = topNode;
+           pop();
+           availableNodes = availableNodes.getLink();
+           underTopNode += availableNodes.getInfo().toString();
+           temp2 = underTopNode;
+           pop();
+
+           push((T) temp);
+           push((T) temp2);
+
+
+        }
+        return true;
     }
 
 
@@ -55,10 +77,11 @@ public class LinkedStack48<T> extends LinkedStack<T> {
 
         System.out.println(LS48.toString());
         System.out.println(LS48.Size());
-        LS48.popSome(5);
-        /*LS48.pop();
-        LS48.pop();
-        LS48.pop();*/
+        LS48.popSome(1);
+
+        System.out.println(LS48.toString());
+        LS48.swapStart();
+        System.out.println("------SWAP------");
         System.out.println(LS48.toString());
     }
 }
