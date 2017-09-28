@@ -2,7 +2,7 @@ package Week4;
 import ch02.stacks.*;
 import support.LLNode;
 
-public class LinkedStack48<T> extends LinkedStack<T> {
+public class LinkedStack47<T> extends LinkedStack<T> {
     public String toString(){
         String temp = "";
         LLNode<T> currentNode = top;
@@ -29,7 +29,7 @@ public class LinkedStack48<T> extends LinkedStack<T> {
        }
        else {
            for (int i = 0; i < count; i++){
-               pop();
+               top = top.getLink();
            }
        }
 
@@ -79,7 +79,7 @@ public class LinkedStack48<T> extends LinkedStack<T> {
 
 
     public static void main(String[] args){
-        LinkedStack48 LS48 = new LinkedStack48();
+        LinkedStack47 LS48 = new LinkedStack47();
 
         LS48.push("Bob ");
         LS48.push("Kid ");
@@ -92,7 +92,7 @@ public class LinkedStack48<T> extends LinkedStack<T> {
 
         System.out.println(LS48.toString());
         System.out.println(LS48.Size());
-        LS48.popSome(1);
+        LS48.popSome(5);
 
         System.out.println(LS48.toString());
         LS48.swapStart();
