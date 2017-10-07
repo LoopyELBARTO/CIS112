@@ -4,10 +4,10 @@ import support.LLNode;
 
 public class RecursiveContains<T> extends RecursiveNumEvens<T> {
 
-    int target = 0;
-    String containValue = "The target is in the List";
+    private int target = 0;
+    private int listOfNumbers = 0;
+
     public boolean contains(int target, LLNode<Integer> list){
-        int listOfNumbers = 0;
         while (list != null){
             listOfNumbers =+ list.getInfo();
             if (listOfNumbers == target){
