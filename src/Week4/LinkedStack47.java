@@ -37,24 +37,46 @@ public class LinkedStack47<T> extends LinkedStack<T> {
 
     public boolean swapStart(){
         LLNode<T> availableNodes = top;
-        String temp = "";
-        String temp2 = "";
-        String topNode = "";
-        String underTopNode = "";
+        LLNode<T> temp;
+        LLNode<T> temp2;
+        LLNode<T> temp3;
+        LLNode<T> FirstNode = top;
+        LLNode<T> SecondNode = top;
         if (Size()< 2){
             return false;
         }
         else {
-           topNode += availableNodes.getInfo().toString();
+           /*topNode += availableNodes.getInfo().toString();
            temp = topNode;
-           pop();
+           top.getLink();
            availableNodes = availableNodes.getLink();
            underTopNode += availableNodes.getInfo().toString();
            temp2 = underTopNode;
-           pop();
+           top = top.getLink();*/
+           /*temp = top;
+           top = top.getLink();
+           SecondNode = temp;
+           temp = top;
+           top = top.getLink();
+           FirstNode = temp;
+           temp = top;
+           top = top.getLink();
+           ThirdNode = temp;
 
-           push((T) temp);
-           push((T) temp2);
+           temp.setLink(SecondNode);
+           temp.setLink(FirstNode);
+           temp.setLink(ThirdNode);*/
+
+          /* temp = FirstNode;
+           FirstNode = temp.getLink();
+           temp2 = SecondNode;
+           SecondNode = temp2.getLink();
+           FirstNode = temp;
+           temp.setLink(FirstNode);
+           SecondNode = temp2;
+           temp2.setLink(SecondNode);
+           temp2.setLink();*/
+
 
 
         }
@@ -92,7 +114,7 @@ public class LinkedStack47<T> extends LinkedStack<T> {
 
         System.out.println(LS48.toString());
         System.out.println(LS48.Size());
-        LS48.popSome(5);
+        LS48.popSome(3);
 
         System.out.println(LS48.toString());
         LS48.swapStart();
