@@ -15,6 +15,7 @@ public class RecursiveNumEvens<T> extends LinkedStack<T> {
         }
         return temp;
     }
+
     int count = 0;
     public int numEvens(LLNode<Integer> list){
         int temp = 0;
