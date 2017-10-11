@@ -8,7 +8,12 @@
     <content url="file://$MODULE_DIR$/../Library/bookFiles">
       <sourceFolder url="file://$MODULE_DIR$/../Library/bookFiles/ch02/apps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../Library/bookFiles" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../Library/bookFiles/ch05" />
+      <excludeFolder url="file://$MODULE_DIR$/../Library/bookFiles/ch06" />
+      <excludeFolder url="file://$MODULE_DIR$/../Library/bookFiles/ch07" />
+      <excludeFolder url="file://$MODULE_DIR$/../Library/bookFiles/ch09" />
       <excludeFolder url="file://$MODULE_DIR$/../Library/bookFiles/ch10" />
+      <excludeFolder url="file://$MODULE_DIR$/../Library/bookFiles/support/cards" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
