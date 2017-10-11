@@ -15,6 +15,11 @@
       <excludeFolder url="file://$MODULE_DIR$/../Library/bookFiles/ch10" />
       <excludeFolder url="file://$MODULE_DIR$/../Library/bookFiles/support/cards" />
     </content>
+    <content url="file://$MODULE_DIR$/../bookFiles">
+      <sourceFolder url="file://$MODULE_DIR$/../bookFiles/ch02/apps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../bookFiles" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../bookFiles/ch10" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

@@ -80,9 +80,9 @@ public class LinkedQueueHW<T> extends LinkedQueue {
                 front = front.getLink();
                 if (front.equals(temp2)){
                     newFirstNode = temp2;
+                    newFirstNode.getLink();
                     newFirstNode.setLink(temp.getLink());
-                    newSecondNode = temp;
-                    newFirstNode.setLink(newSecondNode);
+                    newFirstNode.setLink(temp);
                 }
             }
         }
