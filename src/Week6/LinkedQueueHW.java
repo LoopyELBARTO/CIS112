@@ -59,9 +59,9 @@ public class LinkedQueueHW<T> extends LinkedQueue {
         LLNode<T> temp2;
         LLNode<T> temp3;
 
+
         LLNode<T> newFirstNode;
         LLNode<T> newSecondNode;
-        LLNode<T> newThirdNode;
 
 
 
@@ -70,21 +70,22 @@ public class LinkedQueueHW<T> extends LinkedQueue {
         }
 
         else {
-            /*temp = front;
-            front = front.getLink();
-            firstNode = temp;
-            enqueue(temp.toString());*/
             temp = front;
             temp2 = rear;
-            while (front != temp2){
+
+            while (front != rear){
                 front = front.getLink();
-                if (front.equals(temp2)){
-                    newFirstNode = temp2;
-                    newFirstNode.getLink();
-                    newFirstNode.setLink(temp.getLink());
+                if (front.equals(rear)){
+                    newFirstNode = temp.getLink();
+                    front.setLink(newFirstNode);
+                    for (int i = 0; i < size()-3; i++){
+                        newFirstNode = newFirstNode.getLink();
+                    }
                     newFirstNode.setLink(temp);
                 }
             }
+            temp2 = temp;
+
         }
         return true;
     }
@@ -98,6 +99,8 @@ public class LinkedQueueHW<T> extends LinkedQueue {
         lq.enqueue(3);
         lq.enqueue(4);
         lq.enqueue(5);
+        lq.enqueue(6);
+        lq.enqueue(7);
 
         lq.remove(1);
 
