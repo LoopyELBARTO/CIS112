@@ -5,6 +5,9 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../Libraries/bookFiles">
+      <sourceFolder url="file://$MODULE_DIR$/../Libraries/bookFiles" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/../Library/bookFiles">
       <sourceFolder url="file://$MODULE_DIR$/../Library/bookFiles/ch02/apps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../Library/bookFiles" isTestSource="false" />
