@@ -7,6 +7,7 @@
     </content>
     <content url="file://$MODULE_DIR$/../Libraries/bookFiles">
       <sourceFolder url="file://$MODULE_DIR$/../Libraries/bookFiles" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../Libraries/bookFiles/ch10" />
     </content>
     <content url="file://$MODULE_DIR$/../Library/bookFiles">
       <sourceFolder url="file://$MODULE_DIR$/../Library/bookFiles/ch02/apps" isTestSource="false" />
