@@ -49,7 +49,7 @@ public class Program30<T> extends LinkedCollection<T> {
     }
     public Program30<T> combine (Program30<T> other){
         LLNode<T> currentNode = head;
-        previous.setLink(other);
+        //previous.setLink(other);
         return other;
     }
 
