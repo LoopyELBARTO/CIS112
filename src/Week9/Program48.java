@@ -71,19 +71,27 @@ public class Program48<C> extends BinarySearchTree {
         for(int h = 1 ; h < numTrees+1 ; h++) {
             Program48<Integer> temp = new Program48<>();
             for (int i = 1; i < 1000; i++) {
-                randomNums = p48Int.generateRandomNumbers(1, 3000);
+                randomNums = temp.generateRandomNumbers(1, 3000);
                 temp.add(randomNums);
             }
             System.out.println("Height of tree " + h + ": " + temp.height(temp.root));
             System.out.println("Fullness Ratio: " + temp.fRatio(temp.root) + "\n");
             treeArray.add(temp);
         }
-        System.out.println("---------------------------------");
+        System.out.println("-----------------");
         System.out.println("Program 49");
-        System.out.println("----------------");
+        System.out.println("-----------------");
 
-        Program48<Integer> p49 = new Program48<>();
-
-
+        int K = 20;
+        for (int tree = 1; tree < numTrees+1; tree++){
+            Program48<Integer> temp = new Program48<>();
+            for (int i = 1; i < 1000; i++){
+                if (randomNums == K) {
+                    randomNums = temp.generateRandomNumbers(1, 3000);
+                    temp.add(randomNums);
+                }
+            }
+            treeArray.add(temp);
+        }
     }
 }
